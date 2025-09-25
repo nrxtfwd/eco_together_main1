@@ -99,6 +99,7 @@ button {
     left: 0;
     z-index: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 0 0 10px black;
     right: 80%;
     top: 70px;
@@ -281,7 +282,7 @@ input:focus, textarea:focus, select:focus {
     position: absolute;
     top: 45%;
     bottom: 45%;
-    left: 10px;
+    left: 20px;
     right: 100% - 18px;
     border: 2px solid #35530b;
     color: #35530b;
@@ -289,6 +290,7 @@ input:focus, textarea:focus, select:focus {
     border-radius: 10px;
     transition-property: background-color color;
     transition-duration: 0.3s;
+    z-index: 3;
 }
 
 .home-sidebar .close-sidebar {
@@ -396,6 +398,11 @@ input:focus, textarea:focus, select:focus {
     padding-right: 0;
     background-color: #ffffff;
     border-radius: 10px;
+}
+
+.home-sidebar-element:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
 }
 
 .home-sidebar-element p {
