@@ -1,0 +1,408 @@
+.selectedpath {
+    fill: green;
+}
+
+* {
+    font-family: sans-serif;
+    color: black;
+    outline: none;
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.tooltip {
+    background-color: black;
+    position: absolute;
+    visibility: hidden;
+}
+
+/* .bg-image {
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    z-index: -99;
+    background-image: url('./bg.jpeg');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+} */
+
+.saving-earth {
+    text-align: center;
+}
+
+.delete {
+    border-radius: 10px;
+    background-color: lightcoral;
+    border: none;
+    outline: none;
+    width: 8%;
+    transition: width 0.3s;
+}
+
+.delete:hover {
+    background-color: rgb(183, 77, 77);
+    width: 11%;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4%;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+}
+
+.header {
+    background-color: #35530b;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    z-index: 3;
+}
+
+h1 {
+    
+    color: white;
+}
+button {
+    color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.home-sidebar {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+    right: 80%;
+    top: 70px;
+    bottom: 0;
+    padding: 8px 10px;
+    background-color: #35530b;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-left: auto;
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+}
+
+.menu-button {
+    position: relative;
+}
+
+.create-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+form {
+    margin-top: 5%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid #35530b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select,input,textarea,option {
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    color: rgb(47, 47, 47);
+}
+
+.your-projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1 { text-align: center;}
+
+.project-card {
+    padding: 0 3%;
+    width: 20%;
+    background-color: #40985e;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.project-card:active {
+    background-color: #9cf5ba;
+}
+
+.project-card:hover {
+    cursor: pointer;
+    background-color: #1e5c33;
+}
+
+.checkbox {
+    margin: 0;
+}
+
+.checkbox-div {
+    margin: 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    width: 100%;
+    text-align: left;
+}
+
+.submit {
+    height: 30px;
+    width: 60%;
+    background-color: #1a644e  ;
+    border:none;
+    border-radius: 11px;
+    transition-property: width background-color;
+    transition-duration: 0.3s;
+}
+
+.submit:hover {
+    background-color: #278669  ;
+    width: 80%;
+}
+
+.submit:active {
+    background-color: #39bb94  ;
+}
+
+.yph1 {
+    color: black;
+}
+
+input {
+    
+    border: 1px solid gray;
+    height: 30px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: none;
+    box-shadow: 0 0 10px lightblue;
+    outline: none;
+}
+
+.menu-link {
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    background: black;
+    padding: 0 20px;
+    top: 120%;
+    bottom: -150%;
+    right: -50%;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu button {
+    width: 100%;
+}
+
+.menu button:hover {
+    background-color: rgba(255, 255, 255, 0.447);
+}
+
+.header-buttons button img {
+    
+    height: 100%;
+    width: 100%;
+}
+
+
+.header-buttons button img:hover {
+    cursor: pointer;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 45%;
+    bottom: 45%;
+    left: 10px;
+    right: 100% - 18px;
+    border: 2px solid #35530b;
+    color: #35530b;
+    background: none;
+    border-radius: 10px;
+    transition-property: background-color color;
+    transition-duration: 0.3s;
+}
+
+.home-sidebar .close-sidebar {
+    
+    left: 102%;
+    right: -20%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center p {
+    color: gray;
+}
+
+.login-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    align-items: start;
+    margin-left: 15%;
+}
+
+.login-div-img {
+    /* filter: blur(8px);
+    --webkit-filter: blur(8px); */
+    position: absolute;
+    left: 50%;
+    right:0;
+    top: 0;
+    bottom: 0;
+    z-index: -99;
+    object-fit: cover;
+}
+
+.world-key {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    left: 78%;
+    right: 2%;
+    bottom: 2%;
+    top: 88%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+}
+
+.world-key p {
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.world-key .red {
+    width: 100%;
+    color: lightcoral;
+}
+
+.world-key .green {
+    width: 100%;
+    color: green;
+}
+
+.about-button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    outline:none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #1e5c3300;
+    border: 2px solid #1e5c33;
+    color: #1e5c33;
+    transition-duration: 0.3s;
+    transition-property: width background-color border-color color;
+}
+
+.about-button:hover {
+    width: 60%;
+    color: white;
+    border-color: #1e5c3300;
+    background-color: #1e5c33;
+}
+
+.home-sidebar-element {
+    width: 100%;
+    margin-bottom: 2%;
+    height: 20%;
+    padding: 5px;
+    padding-right: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.home-sidebar-element p {
+    padding: 0;
+    margin: 0;
+}
+
+.close-sidebar:hover {
+   background-color: #35530b;
+   color: white;
+}
