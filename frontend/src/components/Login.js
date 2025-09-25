@@ -23,7 +23,7 @@ const Login = ({ setLoggedInUser }) => {
         e.preventDefault();
         try {
             const res = 
-                await axios.post('http://eco-together-main1-2.onrender.com/api/auth/login', 
+                await axios.post('https://eco-together-main1-2.onrender.com/api/auth/login', 
             {
                 username,
                 password
