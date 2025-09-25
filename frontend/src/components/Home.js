@@ -46,7 +46,7 @@ const Home = ({tooltip}) => {
                         //     tooltip.className = "tooltip hidden"
                         // })
 
-                        if (element.className.toLowerCase() === e.location.toLowerCase()) {
+                        if (element.className === e.location) {
                             element.classList = ['selectedPath']
                         }
                     })
