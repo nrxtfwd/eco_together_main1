@@ -280,10 +280,10 @@ input:focus, textarea:focus, select:focus {
 
 .close-sidebar {
     position: absolute;
-    top: 45%;
-    bottom: 45%;
-    left: 20px;
-    right: 100% - 18px;
+    top: 0;
+    bottom: 92%;
+    left: 80%;
+    right: 0;
     border: 2px solid #35530b;
     color: #35530b;
     background: none;

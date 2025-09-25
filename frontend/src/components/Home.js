@@ -33,7 +33,6 @@ const Home = ({tooltip}) => {
                 projects.map(e => {
                     const allCountries = document.querySelectorAll('path')
                     var path = null
-
                     allCountries.forEach(element => {
                         // element.addEventListener('mousehover', () => {
                         //     console.log("Enter")
@@ -47,17 +46,10 @@ const Home = ({tooltip}) => {
                         //     tooltip.className = "tooltip hidden"
                         // })
 
-                        const thisPath = element.classList.forEach(x => {
-                            if (x.toLowerCase() == e.location.toLowerCase()) {
-                                path = element
-                                return x
-                            }
-                        })
+                        if (element.className.toLowerCase() === e.location.toLowerCase()) {
+                            element.classList = ['selectedPath']
+                        }
                     })
-
-                    if (path) {
-                        path.classList = ['selectedpath']
-                    }
                 })
                 
             }
